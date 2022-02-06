@@ -12,3 +12,12 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const galleryEl = document.querySelector('.gallery');
+
+for (const image of images) {
+  galleryEl.insertAdjacentHTML('beforeend', `<li> <img class='gallery__item' src=${image.url} alt=${image.alt}/> </li>`);
+};
+
+
+

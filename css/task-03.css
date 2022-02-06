@@ -1,0 +1,11 @@
+.gallery {
+    display: flex;
+}
+
+.gallery__item {
+    width: calc((100% - 60px) / 3);
+}
+
+.gallery__item:not(:last-child) {
+    margin-right: 30px;
+}
