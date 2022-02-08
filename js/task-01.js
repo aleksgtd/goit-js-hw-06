@@ -7,10 +7,17 @@
 //     и количество элементов в категории(всех вложенных в него < li >).
 // В результате, в консоли будут выведены такие сообщения.
 
-const itemElements = document.querySelector("ul#categories").children;
+const itemElements = document.querySelector('ul#categories').children;
 console.log(`Number of categories: ${itemElements.length}`);
 
-for (const el of itemElements) {
+// for (const el of itemElements) {
+//     console.log(`Category: ${el.querySelector('h2').textContent}`);
+//     console.log(`Elements: ${el.querySelectorAll('li').length}`);
+// }
+
+const newArr = [...itemElements];
+
+newArr.forEach(el => {
     console.log(`Category: ${el.querySelector('h2').textContent}`);
     console.log(`Elements: ${el.querySelectorAll('li').length}`);
-}
+});

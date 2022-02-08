@@ -14,7 +14,7 @@ function onChangeBgColor(event) {
         return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
     }
 
-    spanForColorName.textContent = getRandomHexColor();
-
     bodyEl.style.backgroundColor = getRandomHexColor();
+
+    spanForColorName.textContent = bodyEl.style.backgroundColor;
 }
